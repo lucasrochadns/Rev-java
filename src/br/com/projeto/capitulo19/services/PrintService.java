@@ -17,4 +17,5 @@ public class PrintService<T> {
     public void print(){
         lista.stream().forEach(System.out::println);
     }
+
 }
