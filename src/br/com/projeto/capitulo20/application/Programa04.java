@@ -5,6 +5,7 @@ import br.com.projeto.capitulo20.entities.Product;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Programa04 {
@@ -12,6 +13,7 @@ public class Programa04 {
         List<Product> lista = new ArrayList<>();
         Consumer<Product> aumentaPrice10 = (p) -> p.setPrice(p.getPrice() * 1.1);
         Consumer<Product> print = (p) -> System.out.printf("%s %.2f \n",p.getName(), p.getPrice());
+        Function<Product, String> saida = p -> String.format("%s, %.2f", p.getName(), p.getPrice());
 
         lista.add(new Product("TV", 900.00));
         lista.add(new Product("Notebook", 1200.00));
