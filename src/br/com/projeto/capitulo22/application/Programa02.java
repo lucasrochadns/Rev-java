@@ -12,7 +12,7 @@ public class Programa02 {
         Stream<Integer> potencia = numeros.stream().map(n -> (int) Math.pow(n, 2));
         potencia.filter(n -> n % 2 == 0).map(n -> " PAR " + n).forEach(System.out::println);
 
-        Consumer<Object> printf = System.out::printf;
+        Consumer<Object> printf = System.out::print;
         Stream<String> langs = Stream.of("Java ", "Lua ", "JS\n");
         String[] maisLangs = {"Python ", "GO", " List", " Perl"};
         Stream.of(maisLangs).forEach(printf);
