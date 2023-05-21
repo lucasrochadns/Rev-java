@@ -1,2 +1,11 @@
-package br.com.projeto.capitulo20.entities;public class MyComparator {
+package br.com.projeto.capitulo20.entities;
+
+import java.util.Comparator;
+import java.util.Locale;
+
+public class MyComparator implements Comparator<Product> {
+    @Override
+    public int compare(Product p1, Product p2) {
+        return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+    }
 }
